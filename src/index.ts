@@ -23,7 +23,7 @@ async function getSignedFileUrl(fileName: string, bucket: string, expiresIn: num
 }
 
 app.getAsync('/', async (req: Request, res: Response) => {
-  const presignedUrl = await getSignedFileUrl("cover.image", "2021-public-bucket", 3600);
+  const presignedUrl = await getSignedFileUrl("PATH", "BUCKET", 3600);
   res.send({ presignedUrl });
 });
 

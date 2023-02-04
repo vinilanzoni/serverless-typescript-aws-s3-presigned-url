@@ -7,6 +7,12 @@ plugins:
 provider:
   name: aws
   runtime: nodejs18.x
+  iam:
+    role:
+      managedPolicies:
+        - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+  httpApi:
+    cors: true
 
 functions:
   api:
